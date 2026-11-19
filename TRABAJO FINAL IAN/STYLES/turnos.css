@@ -1,0 +1,204 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+/* BARRA LATERAL */
+
+.barra-lateral {
+    width: 240px;
+    min-height: 100vh;
+    background-color: #123b5d;
+    color: white;
+    padding: 25px 15px;
+    border-right: 4px solid #38bdf8;
+}
+
+.barra-lateral h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.barra-lateral nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.barra-lateral button {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+    color: white;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.barra-lateral button:hover,
+.barra-lateral button.activo {
+    background-color: #1e668f;
+}
+
+/* CONTENIDO PRINCIPAL */
+
+.contenido {
+    flex: 1;
+    padding: 35px;
+    min-width: 0;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #123b5d;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #64748b;
+}
+
+/* TABLA */
+
+.tabla-contenedor {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #00000010;
+    overflow-x: auto;
+}
+
+.tabla-contenedor h2 {
+    color: #123b5d;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+thead {
+    background-color: #123b5d;
+    color: white;
+}
+
+th, td {
+    padding: 15px 12px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+tbody tr:hover {
+    background-color: #f0f9ff;
+}
+
+.estado {
+    background-color: #dcfce7;
+    color: #2acf69;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.estado.pendiente {
+    background-color: #fef3c7;
+    color: #e4681a;
+}
+
+/* BOTONES DE ACCIONES */
+
+.acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.acciones button {
+    padding: 14px 18px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.acciones button:hover {
+    transform: translateY(-3px);
+    filter: brightness(0.9);
+}
+
+.buscar {
+    background-color: #0e7db5;
+}
+
+.borrar {
+    background-color: #d93b3b;
+}
+
+.configurar {
+    background-color: #4081e9;
+}
+
+.ver {
+    background-color: #28c593;
+}
+
+.especialidades {
+    background-color: #27bbfa;
+}
+
+/* DISEÑO PARA CELULARES */
+
+@media (max-width: 768px) {
+    .barra-lateral {
+        width: 150px;
+        padding: 20px 10px;
+    }
+
+    .barra-lateral h2 {
+        font-size: 15px;
+    }
+
+    .barra-lateral button {
+        font-size: 13px;
+        padding: 12px 8px;
+    }
+
+    .contenido {
+        padding: 20px 12px;
+    }
+
+    .tabla-contenedor {
+        padding: 15px;
+    }
+
+    .acciones {
+        flex-direction: column;
+    }
+
+    .acciones button {
+        width: 100%;
+    }
+}
